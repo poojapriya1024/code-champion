@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(15deg,#d117a3, #EAF122);
+}
+
+.popup {
+    width: 650px;
+    height: 400px;
+    /* background: white; */
+    background: transparent; 
+    border: 3px solid rgba(255, 255, 255, 0.733);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* transform: translate(-50%, -50%) scale(1); */
+    padding: 20px; 
+}
+
+.popup h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid white;
+    font-size: 25px;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.popup .quote {
+    background: gray;
+    color: white; /* Add text color for readability */
+    text-align: center; /* Center the text */
+    padding: 12px; /* Add padding for better spacing */
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 7px;
+}
+
+.popup p {
+    font-size: 19px;
+    text-align: center;
+}
+
+.popup .problem-btn {
+    background: grey;
+    color: white;
+    border: none;
+    font-size: 19px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.9s;
+}
+
+.popup .problem-btn:hover {
+    background: #6B005B;
+}
