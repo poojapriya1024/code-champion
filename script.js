@@ -20,27 +20,17 @@ const renderCalendar = () => {
 
     for(let j = firstDateofMonth; j>0;j--) {
         liTag += `<li class="inactive">${lastDateofLastMonth - j + 1}</li>`;
+        // <a href="#"><li class="inactive">${lastDateofLastMonth - j + 1}</li></a>
     }
-
-    // for(let i=1;i<=lastDateofMonth; i++) {
-    //     let isToday = i === date.getDate() && currMonth === new Date.getMonth()
-    //                         && currYear === new Date().getFullYear()?"active":"";
-    //     liTag += `<li class="${isToday}">${i}</li>`;
-    // }
 
     for (let i = 1; i <= lastDateofMonth; i++) {
         let isToday = i === date.getDate() && currMonth === date.getMonth() && currYear === date.getFullYear() ? "active" : "";
         liTag += `<li class="${isToday}">${i}</li>`;
     }
     
-    // for(let i = lastDateofMonth; i<6; i++) {
-    //     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
-    // }
-
     for (let i = lastDateofMonth + 1; i <= lastDateofMonth + 6 - lastDayofMonth; i++) {
         liTag += `<li class="inactive">${i - lastDateofMonth }</li>`;
     }
-    
     
     currentDate.innerText = `${months[currMonth]} ${currYear}`;
     daysTag.innerHTML = liTag;
@@ -65,3 +55,15 @@ navIcons.forEach( (icon) => {
         renderCalendar();
     });
 });
+
+const days = document.querySelectorAll(".days li");
+console.log(days);
+
+days.forEach((day) => {
+    day.addEventListener("click", () => {
+        if(!day.classList.contains('inactive')) {
+            window.open('main.html', '_blank');
+        }
+    });
+});
+
