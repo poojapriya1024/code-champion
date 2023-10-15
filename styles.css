@@ -5,12 +5,22 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+html {
+    font-size: 16px;
+}
 
 body {
     display:flex;
     align-items: center;
     justify-content: center;
     background: url('/solid-color-image.jpeg');
+    font-size: 1rem;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -19,7 +29,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    width: 100%;
+    width: 90%;
     background: #222;
     margin-top: 50px;
 }
@@ -202,4 +212,13 @@ footer {
     font-weight: 700;
     margin: 0px 5px;
     color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .wrapper header {
+        padding: 10px 20px;
+    }
 }
